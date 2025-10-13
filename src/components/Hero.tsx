@@ -11,9 +11,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center gradient-mesh pt-20 overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <section className="relative min-h-screen flex items-center gradient-mesh pt-20 pb-8 overflow-hidden">
+      {/* Background decoration - with lower z-index */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
         <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-glow" />
       </div>
@@ -25,7 +25,7 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">
                 Binnen 1 week een{" "}
-                <span className="relative inline-block gradient-primary bg-clip-text text-transparent z-10">
+                <span className="text-primary font-bold">
                   professionele website
                 </span>
               </h1>
@@ -69,7 +69,7 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Mockup */}
-          <div className="relative animate-fade-in z-0">
+          <div className="relative animate-fade-in lg:-mt-12">
             <div className="relative animate-float">
               <img
                 src={heroMockup}
@@ -77,8 +77,6 @@ const Hero = () => {
                 className="w-full h-auto drop-shadow-2xl"
               />
             </div>
-            {/* Glow effect behind mockup */}
-            <div className="absolute inset-0 bg-primary/20 blur-3xl -z-10 scale-90" />
           </div>
         </div>
       </div>

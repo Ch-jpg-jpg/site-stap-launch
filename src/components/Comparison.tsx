@@ -60,7 +60,7 @@ const Comparison = () => {
                 <div className="font-bold text-foreground">Traditioneel</div>
               </div>
               <div className="text-center">
-                <div className="font-bold gradient-primary bg-clip-text text-transparent">
+                <div className="font-bold text-primary">
                   SiteStap
                 </div>
               </div>
