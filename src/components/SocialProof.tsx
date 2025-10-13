@@ -43,9 +43,9 @@ const SocialProof = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Counter */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left relative z-10">
             <div className="flex items-baseline justify-center lg:justify-start gap-2">
-              <span className="text-5xl lg:text-6xl font-bold gradient-primary bg-clip-text text-transparent">
+              <span className="text-5xl lg:text-6xl font-bold relative inline-block gradient-primary bg-clip-text text-transparent">
                 {count}+
               </span>
             </div>

@@ -18,14 +18,14 @@ const Hero = () => {
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-glow" />
       </div>
 
-      <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
+      <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="space-y-8 animate-fade-in-up">
+          <div className="space-y-8 animate-fade-in-up relative z-20">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">
                 Binnen 1 week een{" "}
-                <span className="gradient-primary bg-clip-text text-transparent">
+                <span className="relative inline-block gradient-primary bg-clip-text text-transparent z-10">
                   professionele website
                 </span>
               </h1>
@@ -69,8 +69,8 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Mockup */}
-          <div className="relative animate-fade-in">
-            <div className="relative z-10 animate-float">
+          <div className="relative animate-fade-in z-0">
+            <div className="relative animate-float">
               <img
                 src={heroMockup}
                 alt="Professionele website mockup"
