@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,7 +23,7 @@ const Navigation = () => {
     { label: "Contact", href: "#contact" },
   ];
 
-  const scrollToSection = (href) => {
+  const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -38,15 +39,15 @@ const Navigation = () => {
     >
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
           <a href="#" className="flex items-center space-x-2">
-            <img
-              src="/assets/logo.svg"
-              alt="SiteStap logo"
-              className="h-10 w-auto object-contain"
-            />
+            <div className="gradient-primary w-10 h-10 rounded-lg flex items-center justify-center shadow-md">
+              <span className="text-primary-foreground font-bold text-xl">S</span>
+            </div>
             <span className="font-bold text-xl text-foreground">SiteStap</span>
           </a>
 
+          {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
               <button
@@ -59,6 +60,7 @@ const Navigation = () => {
             ))}
           </div>
 
+          {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center space-x-4">
             <Button variant="ghost" size="default" asChild>
               <a href="tel:+31612345678" className="flex items-center gap-2">
@@ -75,6 +77,7 @@ const Navigation = () => {
             </Button>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -88,6 +91,7 @@ const Navigation = () => {
           </button>
         </div>
 
+        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden py-4 space-y-4 animate-fade-in">
             {menuItems.map((item) => (
@@ -106,7 +110,7 @@ const Navigation = () => {
                 className="w-full"
                 asChild
               >
-                
+                <a
                   href="tel:+31612345678"
                   className="flex items-center justify-center gap-2"
                 >
