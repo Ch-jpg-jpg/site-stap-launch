@@ -44,7 +44,7 @@ const Navigation = () => {
     src="/assets/logo.svg"
     alt="SiteStap logo"
     className="h-10 w-auto object-contain"
-  />
+  /></a>
   <span className="font-bold text-xl text-gray-900">SiteStap</span>
 </a>
             <span className="font-bold text-xl text-foreground">SiteStap</span>
