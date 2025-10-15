@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,12 +39,12 @@ const Navigation = () => {
     >
 <a href="#" className="flex items-center space-x-2">
   <img
-    src="/assets/logo.svg"
+    src={logo}
     alt="SiteStap logo"
     className="h-10 w-auto object-contain"
-            </div>
-            <span className="font-bold text-xl text-foreground">SiteStap</span>
-          </a>
+  />
+  <span className="font-bold text-xl text-foreground">SiteStap</span>
+</a>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
