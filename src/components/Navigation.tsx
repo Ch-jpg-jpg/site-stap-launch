@@ -44,8 +44,8 @@ const Navigation = () => {
               <img 
                 src={logo} 
                 alt="SiteStap logo" 
-                className="w-10 h-10 object-contain"/>
-            <span className="font-bold text-xl text-foreground">SiteStap</span>
+                className="w-[4.5rem] h-[4.5rem] object-contain"/>
+            <span className="font-bold text-[1.75rem] text-foreground">SiteStap</span>
           </a>
 
           {/* Desktop Menu */}
