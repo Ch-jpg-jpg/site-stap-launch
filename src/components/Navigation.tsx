@@ -18,7 +18,7 @@ const Navigation = () => {
     { label: "Portfolio", href: "#portfolio" },
     { label: "Diensten", href: "#diensten" },
     { label: "Prijzen", href: "#prijzen" },
-    { label: "Testimonials", href: "#testimonials" },
+    { label: "Ervaringen", href: "#testimonials" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -36,12 +36,11 @@ const Navigation = () => {
         isScrolled ? "glass shadow-lg" : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <a href="#" className="flex items-center space-x-2">
-            <div className="gradient-primary w-10 h-10 rounded-lg flex items-center justify-center shadow-md">
-              <span className="text-primary-foreground font-bold text-xl">S</span>
+<a href="#" className="flex items-center space-x-2">
+  <img
+    src="/assets/logo.svg"
+    alt="SiteStap logo"
+    className="h-10 w-auto object-contain"
             </div>
             <span className="font-bold text-xl text-foreground">SiteStap</span>
           </a>
