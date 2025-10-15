@@ -22,7 +22,7 @@ const Navigation = () => {
     { label: "Contact", href: "#contact" },
   ];
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = (href) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -38,7 +38,6 @@ const Navigation = () => {
     >
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
           <a href="#" className="flex items-center space-x-2">
             <img
               src="/assets/logo.svg"
@@ -48,7 +47,6 @@ const Navigation = () => {
             <span className="font-bold text-xl text-foreground">SiteStap</span>
           </a>
 
-          {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
               <button
@@ -61,7 +59,6 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center space-x-4">
             <Button variant="ghost" size="default" asChild>
               <a href="tel:+31612345678" className="flex items-center gap-2">
@@ -78,7 +75,6 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -92,7 +88,6 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden py-4 space-y-4 animate-fade-in">
             {menuItems.map((item) => (
