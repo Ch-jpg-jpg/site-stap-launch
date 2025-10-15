@@ -41,7 +41,7 @@ const Navigation = () => {
   {/* Logo */} 
   <a href="#" className="flex items-center space-x-2"> 
   <div className="gradient-primary w-10 h-10 rounded-lg flex items-center justify-center shadow-md"> 
-  <span className="text-primary-foreground font-bold text-xl">S</span>"
+  <span className="text-primary-foreground font-bold text-xl">S</span>
             <span className="font-bold text-xl text-foreground">SiteStap</span>
           </a>
 
