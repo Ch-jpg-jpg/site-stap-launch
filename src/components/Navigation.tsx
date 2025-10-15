@@ -40,13 +40,16 @@ const Navigation = () => {
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-            <a href="#" className="flex items-center space-x-2">
-              <img 
-                src={logo} 
-                alt="SiteStap logo" 
-                className="w-[4.5rem] h-[4.5rem] object-contain"/>
-            <span className="font-bold text-[1.75rem] text-foreground">SiteStap</span>
-          </a>
+<a href="#" className="flex items-center space-x-1">
+  <img
+    src={logo}
+    alt="SiteStap logo"
+    className="w-[4.5rem] h-[4.5rem] object-contain"
+  />
+  <span className="font-bold text-[1.75rem] text-foreground -ml-0.5">
+    SiteStap
+  </span>
+</a>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
