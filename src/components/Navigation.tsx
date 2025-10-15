@@ -37,14 +37,18 @@ const Navigation = () => {
         isScrolled ? "glass shadow-lg" : "bg-transparent"
       }`}
     >
-<a href="#" className="flex items-center space-x-2">
-  <img
-    src={logo}
-    alt="SiteStap logo"
-    className="h-10 w-auto object-contain"
-  />
-  <span className="font-bold text-xl text-foreground">SiteStap</span>
-</a>
+      {/* ✅ FIX: open <nav> toegevoegd */}
+      <nav className="container mx-auto px-4 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
+          <a href="#" className="flex items-center space-x-2">
+            <img
+              src={logo}
+              alt="SiteStap logo"
+              className="h-10 w-auto object-contain"
+            />
+            <span className="font-bold text-xl text-foreground">SiteStap</span>
+          </a>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -67,7 +71,11 @@ const Navigation = () => {
                 <span>Bel ons</span>
               </a>
             </Button>
-            <Button variant="hero" size="lg" onClick={() => scrollToSection("#contact")}>
+            <Button
+              variant="hero"
+              size="lg"
+              onClick={() => scrollToSection("#contact")}
+            >
               Start nu
             </Button>
           </div>
@@ -99,13 +107,26 @@ const Navigation = () => {
               </button>
             ))}
             <div className="space-y-2 pt-4">
-              <Button variant="outline" size="default" className="w-full" asChild>
-                <a href="tel:+31612345678" className="flex items-center justify-center gap-2">
+              <Button
+                variant="outline"
+                size="default"
+                className="w-full"
+                asChild
+              >
+                <a
+                  href="tel:+31612345678"
+                  className="flex items-center justify-center gap-2"
+                >
                   <Phone className="w-4 h-4" />
                   <span>Bel ons</span>
                 </a>
               </Button>
-              <Button variant="hero" size="lg" className="w-full" onClick={() => scrollToSection("#contact")}>
+              <Button
+                variant="hero"
+                size="lg"
+                className="w-full"
+                onClick={() => scrollToSection("#contact")}
+              >
                 Start nu
               </Button>
             </div>
